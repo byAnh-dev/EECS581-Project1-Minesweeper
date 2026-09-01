@@ -35,7 +35,7 @@
 
 ### Kodai Nakae
 
-<img src="assets/team-member-4.jpg" alt="Team Member 4" width="150">
+<img src="assets/Kodai.PNG" alt="Team Member 4" width="150">
 
 - **KU Email:** [kodai.nakae@ku.edu](mailto:kodai.nakae@ku.edu)
 - **GitHub:** [kodai1126](https://github.com/kodai1126)
