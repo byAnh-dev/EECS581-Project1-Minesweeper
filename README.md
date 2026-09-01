@@ -8,12 +8,12 @@
 
 ### Anh Hoang
 
-<img src="assets/anh-hoang.jpg" alt="Anh Hoang" width="150">
+<img src="assets/anhhoang.jpg" alt="Anh Hoang" width="150">
 
 - **KU Email:** [anh.hoang@ku.edu](mailto:anh.hoang@ku.edu)
 - **GitHub:** [byAnh-Dev](https://github.com/byAnh-dev)
-- **Expertise:**
-- **Availability:**
+- **Expertise:** React, Flask, Node.js
+- **Availability:** MWF 12:00PM - 1:00PM
 
 ### Sreeja Narahari
 
