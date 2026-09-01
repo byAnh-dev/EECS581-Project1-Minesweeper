@@ -51,14 +51,14 @@
 - **Expertise:**
 - **Availability:**
 
-### Rijuh Poudel
+### Rijul Poudel
 
 <img src="assets/team-member-4.jpg" alt="Team Member 4" width="150">
 
 - **KU Email:** [rijulpoudel72@ku.edu](mailto:rijulpoudel72@ku.edu)
 - **GitHub:** [rijulpoudel](https://github.com/rijulpoudel)
-- **Expertise:**
-- **Availability:**
+- **Expertise:** Backend development
+- **Availability:**Wednesday-Friday (5:00PM - 8:00PM)
 
 ### Montaha Jornaz
 
@@ -69,21 +69,18 @@
 - **Expertise:**
 - **Availability:**
 
-
 ## Team Roles
 
-| Role | Team member | Responsibilities |
-|---|---|---|
-| Team administrator | TBD | Submit project links and deliverables to Canvas |
-| Project coordinator | TBD | Track milestones, tasks, and deadlines |
-| Repository manager | TBD | Maintain the repository structure and review pull requests |
-| Meeting-log owner | TBD | Record attendance, decisions, tasks, and task completion |
-| Testing/quality lead | TBD | Coordinate testing and verify deliverables |
+| Role                 | Team member | Responsibilities                                           |
+| -------------------- | ----------- | ---------------------------------------------------------- |
+| Team administrator   | TBD         | Submit project links and deliverables to Canvas            |
+| Project coordinator  | TBD         | Track milestones, tasks, and deadlines                     |
+| Repository manager   | TBD         | Maintain the repository structure and review pull requests |
+| Meeting-log owner    | TBD         | Record attendance, decisions, tasks, and task completion   |
+| Testing/quality lead | TBD         | Coordinate testing and verify deliverables                 |
 
 ## Meetings
 
 - **Internal team meeting:** TBD
 - **Weekly TA meeting:** TBD, Eaton 3001
 - [View all meeting logs](./meeting-logs/)
-
-
