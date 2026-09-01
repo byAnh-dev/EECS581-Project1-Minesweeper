@@ -1,0 +1,89 @@
+# EECS 581 Team Portfolio
+
+**Course:** EECS 581 - Software Engineering II  
+**Semester:** Fall 2026  
+**Instructor:** Professor Hossein Saiedian
+
+## Team Members
+
+### Anh Hoang
+
+<img src="assets/anh-hoang.jpg" alt="Anh Hoang" width="150">
+
+- **KU Email:** [anh.hoang@ku.edu](mailto:anh.hoang@ku.edu)
+- **GitHub:** [byAnh-Dev](https://github.com/byAnh-dev)
+- **Expertise:**
+- **Availability:**
+
+### Sreeja Narahari
+
+<img src="assets/team-member-2.jpg" alt="Team Member 2" width="150">
+
+- **KU Email:** [sreeja@ku.edu](mailto:sreeja@ku.edu)
+- **GitHub:** [sreeja-na](https://github.com/sreeja-na)
+- **Expertise:**
+- **Availability:**
+
+### Shayaan Mohammed
+
+<img src="assets/team-member-3.jpg" alt="Team Member 3" width="150">
+
+- **KU Email:** [shayaanm@ku.edu](mailto:shayaanm@ku.edu)
+- **GitHub:** [Shayaan04](https://github.com/Shayaan04)
+- **Expertise:**
+- **Availability:**
+
+### Kodai Nakae
+
+<img src="assets/team-member-4.jpg" alt="Team Member 4" width="150">
+
+- **KU Email:** [kodai.nakae@ku.edu](mailto:kodai.nakae@ku.edu)
+- **GitHub:** [kodai1126](https://github.com/kodai1126)
+- **Expertise:**
+- **Availability:**
+
+### Mariska Rai
+
+<img src="assets/team-member-4.jpg" alt="Team Member 4" width="150">
+
+- **KU Email:** [mrai38@ku.edu](mailto:mrai38@ku.edu)
+- **GitHub:** [mariskarai](https://github.com/mariskarai)
+- **Expertise:**
+- **Availability:**
+
+### Rijuh Poudel
+
+<img src="assets/team-member-4.jpg" alt="Team Member 4" width="150">
+
+- **KU Email:** [rijulpoudel72@ku.edu](mailto:rijulpoudel72@ku.edu)
+- **GitHub:** [rijulpoudel](https://github.com/rijulpoudel)
+- **Expertise:**
+- **Availability:**
+
+### Montaha Jornaz
+
+<img src="assets/team-member-4.jpg" alt="Team Member 4" width="150">
+
+- **KU Email:** [email@ku.edu](mailto:email@ku.edu)
+- **GitHub:** [github-username](https://github.com/github-username)
+- **Expertise:**
+- **Availability:**
+
+
+## Team Roles
+
+| Role | Team member | Responsibilities |
+|---|---|---|
+| Team administrator | TBD | Submit project links and deliverables to Canvas |
+| Project coordinator | TBD | Track milestones, tasks, and deadlines |
+| Repository manager | TBD | Maintain the repository structure and review pull requests |
+| Meeting-log owner | TBD | Record attendance, decisions, tasks, and task completion |
+| Testing/quality lead | TBD | Coordinate testing and verify deliverables |
+
+## Meetings
+
+- **Internal team meeting:** TBD
+- **Weekly TA meeting:** TBD, Eaton 3001
+- [View all meeting logs](./meeting-logs/)
+
+
