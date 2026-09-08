@@ -26,7 +26,7 @@
 
 ### Shayaan Mohammed
 
-<img src="assets/team-member-3.jpg" alt="Team Member 3" width="150">
+<img src="assets/Shayaan.JPG" alt="Team Member 3" width="150">
 
 - **KU Email:** [shayaanm@ku.edu](mailto:shayaanm@ku.edu)
 - **GitHub:** [Shayaan04](https://github.com/Shayaan04)
@@ -53,7 +53,7 @@
 
 ### Rijul Poudel
 
-<img src="assets/team-member-4.jpg" alt="Team Member 4" width="150">
+<img src="assets/rijul.png" alt="Team Member 4" width="150">
 
 - **KU Email:** [rijulpoudel72@ku.edu](mailto:rijulpoudel72@ku.edu)
 - **GitHub:** [rijulpoudel](https://github.com/rijulpoudel)
