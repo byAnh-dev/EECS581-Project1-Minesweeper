@@ -73,14 +73,14 @@
 
 | Role                 | Team member | Responsibilities                                           |
 | -------------------- | ----------- | ---------------------------------------------------------- |
-| Team administrator   | TBD         | Submit project links and deliverables to Canvas            |
-| Project coordinator  | TBD         | Track milestones, tasks, and deadlines                     |
-| Repository manager   | TBD         | Maintain the repository structure and review pull requests |
-| Meeting-log owner    | TBD         | Record attendance, decisions, tasks, and task completion   |
-| Testing/quality lead | TBD         | Coordinate testing and verify deliverables                 |
+| Team administrator   | Montaha         | Submit project links and deliverables to Canvas            |
+| Project coordinator  | Mariska         | Track milestones, tasks, and deadlines                     |
+| Repository manager   | Anh, Rijul         | Maintain the repository structure and review pull requests |
+| Meeting-log owner    | Sreeja         | Record attendance, decisions, tasks, and task completion   |
+| Testing/quality lead | Kodai, Shayaan         | Coordinate testing and verify deliverables                 |
 
 ## Meetings
 
-- **Internal team meeting:** TBD
+- **Internal team meeting:** Wed 8-9pm? Or whenever
 - **Weekly TA meeting:** TBD, Eaton 3001
 - [View all meeting logs](./meeting-logs/)
