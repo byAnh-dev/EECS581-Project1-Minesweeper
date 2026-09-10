@@ -1,8 +1,10 @@
 
-import { BOARD_SIZE, type Board, type Cell } from "./types.ts";
+import {
+  BOARD_SIZE, MIN_MINES, MAX_MINES,
+  type AdjacentMines, type Board, type Cell, type Position, type RandomSource,
+} from "./types.ts";
 
-/** Creates a fresh covered board before mines are placed and counts calculated. */
-export function createBoard(): Board {
+export function createBoard(): Board { //Initiate 100 cells with no mine and are covered
   return Array.from({ length: BOARD_SIZE }, () =>
     Array.from({ length: BOARD_SIZE }, (): Cell => ({
       hasMine: false,
