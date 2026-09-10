@@ -75,12 +75,44 @@
 | -------------------- | ----------- | ---------------------------------------------------------- |
 | Team administrator   | Montaha         | Submit project links and deliverables to Canvas            |
 | Project coordinator  | Mariska         | Track milestones, tasks, and deadlines                     |
-| Repository manager   | Anh, Rijul         | Maintain the repository structure and review pull requests |
-| Meeting-log owner    | Sreeja         | Record attendance, decisions, tasks, and task completion   |
-| Testing/quality lead | Kodai, Shayaan         | Coordinate testing and verify deliverables                 |
+| Repository manager   | Anh,  Rijul         | Maintain the repository structure and review pull requests |
+| Meeting-log owner    | Shayaan         | Record attendance, decisions, tasks, and task completion   |
+| Testing/quality lead | Kodai, Sreeja         | Coordinate testing and verify deliverables                 |
 
 ## Meetings
 
-- **Internal team meeting:** Wed 8-9pm? Or whenever
-- **Weekly TA meeting:** TBD, Eaton 3001
+- **Internal team meeting: Wed 8:00PM-9:00PM** 
+- **Weekly TA meeting:** Wed 1:00pm - 2:00pm, Eaton 3001
 - [View all meeting logs](./meeting-logs/)
+
+## Minesweeper setup info
+### How to run our repo
+
+```sh
+git clone https://github.com/byAnh-dev/EECS581-Project1-Minesweeper.git
+cd EECS581-Project1-Minesweeper
+npm ci
+npm run dev
+```
+
+Open the local URL printed by Vite, usually `http://localhost:5173`. **Ctrl+C** in that terminal to stop the server.
+
+
+### Dependencies and source layout
+
+| Packages | Purpose |
+| --- | --- |
+| `react`, `react-dom` | UI rendering |
+| `typescript`, `@types/react`, `@types/react-dom` | Type checking and React type definitions |
+| `vite`, `@vitejs/plugin-react` | Development server, React integration, and production build |
+
+```text
+src/
+  boardManager.ts     # Board operations (placeholder)
+  gameLogic.ts        # Start, uncover, and flag contracts
+  inputHandler.ts     # Input validation (placeholder)
+  UserInterface.tsx   # React interface
+  types.ts           # Shared game types
+  main.tsx           # React entry point
+  styles.css         # Styles
+```
