@@ -71,21 +71,22 @@
 
 ## Team Roles
 
-| Role                 | Team member | Responsibilities                                           |
-| -------------------- | ----------- | ---------------------------------------------------------- |
-| Team administrator   | Montaha         | Submit project links and deliverables to Canvas            |
-| Project coordinator  | Mariska         | Track milestones, tasks, and deadlines                     |
-| Repository manager   | Anh,  Rijul         | Maintain the repository structure and review pull requests |
-| Meeting-log owner    | Shayaan         | Record attendance, decisions, tasks, and task completion   |
-| Testing/quality lead | Kodai, Sreeja         | Coordinate testing and verify deliverables                 |
+| Role                 | Team member   | Responsibilities                                           |
+| -------------------- | ------------- | ---------------------------------------------------------- |
+| Team administrator   | Montaha       | Submit project links and deliverables to Canvas            |
+| Project coordinator  | Mariska       | Track milestones, tasks, and deadlines                     |
+| Repository manager   | Anh, Rijul    | Maintain the repository structure and review pull requests |
+| Meeting-log owner    | Shayaan       | Record attendance, decisions, tasks, and task completion   |
+| Testing/quality lead | Kodai, Sreeja | Coordinate testing and verify deliverables                 |
 
 ## Meetings
 
-- **Internal team meeting: Wed 8:00PM-9:00PM** 
+- **Internal team meeting: Wed 8:00PM-9:00PM**
 - **Weekly TA meeting:** Wed 1:00pm - 2:00pm, Eaton 3001
 - [View all meeting logs](./meeting-logs/)
 
 ## Minesweeper setup info
+
 ### How to run our repo
 
 ```sh
@@ -97,14 +98,13 @@ npm run dev
 
 Open the local URL printed by Vite, usually `http://localhost:5173`. **Ctrl+C** in that terminal to stop the server.
 
-
 ### Dependencies and source layout
 
-| Packages | Purpose |
-| --- | --- |
-| `react`, `react-dom` | UI rendering |
-| `typescript`, `@types/react`, `@types/react-dom` | Type checking and React type definitions |
-| `vite`, `@vitejs/plugin-react` | Development server, React integration, and production build |
+| Packages                                         | Purpose                                                     |
+| ------------------------------------------------ | ----------------------------------------------------------- |
+| `react`, `react-dom`                             | UI rendering                                                |
+| `typescript`, `@types/react`, `@types/react-dom` | Type checking and React type definitions                    |
+| `vite`, `@vitejs/plugin-react`                   | Development server, React integration, and production build |
 
 ```text
 src/
