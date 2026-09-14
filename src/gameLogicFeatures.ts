@@ -32,9 +32,19 @@ export function calculateAdjacentMines(board: Board): Board {
   );
 }
 
+/**
+ * Guarantee that the cell the player opens first is not a mine.
+ *
+ * If the cursor sits on a mine, the mine is moved to another covered, mine-free cell so
+ * the mine count never changes. The destination is drawn from the injected random source
+ * instead of the first free cell in scan order: a fixed destination would make the
+ * opening move predictable to an observant player, and injecting the source keeps the
+ * choice reproducible for tests.
+ */
 export function makeFirstCellSafe(
   board: Board,
   position: Position,
+  random: RandomSource = Math.random,
 ): Board {
   const firstCell = getCell(board, position);
 
@@ -42,9 +52,9 @@ export function makeFirstCellSafe(
     return board;
   }
 
-  let newMinePosition: Position | undefined;
+  const candidates: Position[] = [];
 
-  for (let row = 0; row < BOARD_SIZE && newMinePosition === undefined; row++) {
+  for (let row = 0; row < BOARD_SIZE; row++) {
     for (let column = 0; column < BOARD_SIZE; column++) {
       const candidate = getCell(board, { row, column });
 
@@ -53,15 +63,22 @@ export function makeFirstCellSafe(
         candidate.visibility === "covered" &&
         (row !== position.row || column !== position.column)
       ) {
-        newMinePosition = { row, column };
-        break;
+        candidates.push({ row, column });
       }
     }
   }
 
-  if (newMinePosition === undefined) {
+  // A board with nowhere to move the mine is left untouched rather than corrupted.
+  if (candidates.length === 0) {
     return board;
   }
+
+  const sample = random();
+  if (!Number.isFinite(sample) || sample < 0 || sample >= 1) {
+    throw new RangeError("The random source must return a number in [0, 1).");
+  }
+
+  const newMinePosition = candidates[Math.floor(sample * candidates.length)]!;
 
   const updatedBoard = board.map((row, rowIndex) =>
     row.map((cell, columnIndex) => {
