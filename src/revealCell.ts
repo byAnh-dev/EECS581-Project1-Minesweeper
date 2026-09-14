@@ -1,5 +1,6 @@
-import { getCell, isValidPosition, updateCell } from "./boardManager.ts";
+import { getCell, isValidPosition } from "./boardManager.ts";
 import { makeFirstCellSafe } from "./gameLogicFeatures.ts";
+import { revealSafeArea } from "./safeAreaReveal.ts";
 import {
   type ActionResult,
   type GameState,
@@ -33,9 +34,10 @@ function unchanged(state: GameState): ActionResult {
  * then refuse to touch a finished game, then honour the player's own flags. Only after
  * all three do we spend randomness on first-click safety.
  *
- * The single zero-region cascade and the win/lose board effects are intentionally NOT
- * here; they compose on top of this function through `revealSafeArea`, `hasWon`, and
- * `loseGame`.
+ * The amount of board that opens is not decided here: once the click is proven legal and
+ * mine-free, `revealSafeArea` takes over so that opening an empty cell cascades and
+ * opening a numbered cell opens only itself. Win detection and the game-over board
+ * effects are layered on in follow-up issues.
  */
 export function uncoverSingleCell(
   state: GameState,
@@ -70,13 +72,17 @@ export function uncoverSingleCell(
     };
   }
 
+  // Hand the safe cell to the cascade: it decides whether this click opens one cell or a
+  // whole region, and reports how many cells were genuinely newly opened.
+  const { board: revealedBoard, revealedCount } = revealSafeArea(board, position);
+
   return {
     ok: true,
     changed: true,
     state: {
       ...state,
-      board: updateCell(board, position, { visibility: "revealed" }),
-      revealedSafeCount: state.revealedSafeCount + 1,
+      board: revealedBoard,
+      revealedSafeCount: state.revealedSafeCount + revealedCount,
       firstRevealDone: true,
     },
   };
