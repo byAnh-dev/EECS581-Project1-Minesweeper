@@ -1,5 +1,6 @@
 import { getCell, isValidPosition } from "./boardManager.ts";
 import { makeFirstCellSafe } from "./gameLogicFeatures.ts";
+import { loseGame } from "./mineExposure.ts";
 import { revealSafeArea } from "./safeAreaReveal.ts";
 import { withWinStatus } from "./winDetection.ts";
 import {
@@ -29,7 +30,7 @@ function unchanged(state: GameState): ActionResult {
 }
 
 /**
- * Player command: open exactly one cell.
+ * Player command: open a cell, and whatever it cascades into.
  *
  * Order of the guards matters. We reject bad coordinates first (cheap, unambiguous),
  * then refuse to touch a finished game, then honour the player's own flags. Only after
@@ -37,8 +38,9 @@ function unchanged(state: GameState): ActionResult {
  *
  * The amount of board that opens is not decided here: once the click is proven legal and
  * mine-free, `revealSafeArea` takes over so that opening an empty cell cascades and
- * opening a numbered cell opens only itself. Win detection and the game-over board
- * effects are layered on in follow-up issues.
+ * opening a numbered cell opens only itself. A legal click then has exactly three
+ * possible outcomes: `loseGame` (the cell was a mine), `withWinStatus` (it was the last
+ * safe cell), or an ordinary reveal that leaves the game running.
  */
 export function uncoverSingleCell(
   state: GameState,
@@ -64,12 +66,13 @@ export function uncoverSingleCell(
     : makeFirstCellSafe(state.board, position, random);
 
   if (getCell(board, position).hasMine) {
-    // Loss is detected here; showing the minefield afterwards is the game-over
-    // module's responsibility so this function stays a single-cell primitive.
+    // Loss: the run is over and the minefield is exposed so the player can see what
+    // ended it. `loseGame` runs on the freshest board, which differs from `state.board`
+    // only when the first-click safety move relocated a mine.
     return {
       ok: true,
       changed: true,
-      state: { ...state, board, firstRevealDone: true, status: "lost" },
+      state: loseGame({ ...state, board, firstRevealDone: true }),
     };
   }
 
