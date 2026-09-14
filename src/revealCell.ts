@@ -1,6 +1,7 @@
 import { getCell, isValidPosition } from "./boardManager.ts";
 import { makeFirstCellSafe } from "./gameLogicFeatures.ts";
 import { revealSafeArea } from "./safeAreaReveal.ts";
+import { withWinStatus } from "./winDetection.ts";
 import {
   type ActionResult,
   type GameState,
@@ -76,14 +77,16 @@ export function uncoverSingleCell(
   // whole region, and reports how many cells were genuinely newly opened.
   const { board: revealedBoard, revealedCount } = revealSafeArea(board, position);
 
+  // Win detection runs last. Because the mine branch above already returned, a reveal
+  // that opens a mine can never be upgraded into a win here.
   return {
     ok: true,
     changed: true,
-    state: {
+    state: withWinStatus({
       ...state,
       board: revealedBoard,
       revealedSafeCount: state.revealedSafeCount + revealedCount,
       firstRevealDone: true,
-    },
+    }),
   };
 }
