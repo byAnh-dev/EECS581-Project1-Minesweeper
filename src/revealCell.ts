@@ -30,7 +30,7 @@ function unchanged(state: GameState): ActionResult {
 }
 
 /**
- * Player command: open exactly one cell.
+ * Player command: open a cell, and whatever it cascades into.
  *
  * Order of the guards matters. We reject bad coordinates first (cheap, unambiguous),
  * then refuse to touch a finished game, then honour the player's own flags. Only after
