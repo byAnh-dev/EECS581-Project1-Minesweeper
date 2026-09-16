@@ -112,3 +112,36 @@ function malformedCellInput(): ActionResult {
     message: "Point at a cell on the board, or type a reference like B5.",
   };
 }
+
+/**
+ * Validates a cell selection and uncovers it.
+ */
+export function processUncoverInput(
+  state: GameState,
+  event: CellInputEvent,
+  random: RandomSource = Math.random,
+): ActionResult {
+  const position = resolvePosition(event);
+
+  if (position === null) {
+    return malformedCellInput();
+  }
+
+  return uncover(state, position, random);
+}
+
+/**
+ * Validates a cell selection and toggles its flag.
+ */
+export function processFlagInput(
+  state: GameState,
+  event: CellInputEvent,
+): ActionResult {
+  const position = resolvePosition(event);
+
+  if (position === null) {
+    return malformedCellInput();
+  }
+
+  return toggleFlag(state, position);
+}
