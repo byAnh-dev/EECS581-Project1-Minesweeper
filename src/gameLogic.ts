@@ -1,10 +1,11 @@
 import { createBoardWithMines } from "./boardManager.ts";
+import { uncoverSingleCell } from "./revealCell.ts";
 import {
   MIN_MINES, MAX_MINES,
   type ActionResult, type GameState, type Position, type RandomSource,
 } from "./types.ts";
 
-/** Game Logic contract; uncover and toggleFlag remain to be implemented. */
+/** Game Logic contract; `uncover` is implemented, `toggleFlag` remains to be wired. */
 export interface GameLogic {
   startGame(mineCount: number, random?: RandomSource): ActionResult;
   uncover(state: GameState, position: Position, random: RandomSource): ActionResult;
@@ -36,4 +37,18 @@ export function startGame(
       status: "playing",
     },
   };
+}
+
+/**
+ * Player command: open one cell.
+ *
+ * Thin delegator so `gameLogic.ts` stays the single import surface the UI and the input
+ * handler talk to, while the reveal rules live in their own module.
+ */
+export function uncover(
+  state: GameState,
+  position: Position,
+  random: RandomSource = Math.random,
+): ActionResult {
+  return uncoverSingleCell(state, position, random);
 }
