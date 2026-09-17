@@ -2,6 +2,8 @@ import { useState } from "react";
 import SetupControls from "./components/SetupControls";
 import { processSetupInput } from "./inputHandler";
 import type { GameState } from "./types";
+import TopPanel from "./components/TopPanel";
+
 
 export default function UserInterface() {
   const [gameState, setGameState] = useState<GameState | null>(null);
@@ -23,6 +25,8 @@ export default function UserInterface() {
 
   return (
     <main>
+      <TopPanel />
+      
       <h1>Minesweeper</h1>
       <p>Uncover safe cells and flag suspected mines on a 10 × 10 board.</p>
 
