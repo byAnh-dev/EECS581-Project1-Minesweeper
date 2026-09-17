@@ -1,12 +1,213 @@
-:root {
-  font-family: system-ui, sans-serif;
-  color: #202720;
-  background: #f5f6f3;
-  line-height: 1.5;
+.setup-panel {
+  container-type: inline-size;
+  container-name: setup-panel;
+  width: calc(100% - 64px);
+  max-width: 1036px;
+  margin-inline: auto;
 }
 
-* { box-sizing: border-box; }
-body { margin: 0; }
-main { max-width: 48rem; margin: 3rem auto; padding: 1.5rem; }
-h1 { margin: 0 0 1rem; font-size: 2rem; }
-.status { padding: 1rem; border-left: 0.25rem solid #466546; background: #e8eee5; }
+.setup-controls {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 3px 0 24px;
+  border: 0;
+  border-bottom: 4px solid transparent;
+
+  background: transparent;
+  color: #0f172a;
+}
+
+/* Figma divider: 8px dashes, 4px gaps. */
+.setup-controls::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  left: 0;
+  height: 4px;
+
+  background: repeating-linear-gradient(
+    to right,
+    #8c95a4 0 8px,
+    transparent 8px 12px
+  );
+
+  pointer-events: none;
+}
+
+/* Mine-count label and input. */
+.setup-controls__field {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 0 0 289.75px;
+  min-width: 0;
+}
+
+.setup-controls__field label {
+  margin: 0;
+  min-height: 17px;
+
+  font-family: "Press Start 2P", monospace;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 17px;
+  letter-spacing: 0.22px;
+  text-transform: uppercase;
+  color: #334155;
+}
+
+.setup-controls__field input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  height: 64.7px;
+  min-height: 64px;
+  padding: 7.84px 16px 7.86px;
+
+  border: 4px solid #0f172a;
+  border-radius: 0;
+  background: #f6f8fb;
+  color: #0f172a;
+  box-shadow: inset 3px 3px 0 4px rgb(15 23 42 / 12%);
+
+  font-family: "Press Start 2P", monospace;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 40px;
+
+  /* Hide spinner arrows while retaining number-input behavior. */
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.setup-controls__field input::-webkit-inner-spin-button,
+.setup-controls__field input::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+.setup-controls__field input::placeholder {
+  color: #64748b;
+  opacity: 1;
+}
+
+/* Explanatory text. */
+.setup-controls__description {
+  display: flex;
+  flex-direction: column;
+  gap: 6.84px;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.setup-controls__description h2 {
+  margin: 0;
+
+  font-family: "Press Start 2P", monospace;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #0f172a;
+}
+
+.setup-controls__description p {
+  width: 100%;
+  max-width: 307px;
+  margin: 0;
+  padding-bottom: 0.535px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 13.3px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #334155;
+}
+
+/* Start button. */
+.setup-controls button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 180px;
+
+  box-sizing: border-box;
+  width: 180px;
+  min-height: 52px;
+  padding: 14px 24px;
+
+  border: 4px solid #0f172a;
+  border-radius: 9999px;
+  background: #006365;
+  color: #ffffff;
+  box-shadow: 4px 4px 0 #0f172a;
+
+  font-family: "Press Start 2P", monospace;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.22px;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.setup-controls button:hover:not(:disabled) {
+  background: #005254;
+}
+
+.setup-controls button:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #0f172a;
+}
+
+.setup-controls input:focus-visible,
+.setup-controls button:focus-visible {
+  outline: 3px solid #008b91;
+  outline-offset: 4px;
+}
+
+.setup-controls :disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Keep the layout usable inside narrower page containers. */
+@container setup-panel (max-width: 900px) {
+  .setup-controls {
+    flex-wrap: wrap;
+  }
+
+  .setup-controls__description {
+    flex: 1 1 300px;
+  }
+
+  .setup-controls button {
+    margin-left: auto;
+  }
+}
+
+@container setup-panel (max-width: 540px) {
+  .setup-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .setup-controls__field,
+  .setup-controls__description {
+    flex: none;
+    width: 100%;
+  }
+
+  .setup-controls button {
+    flex: none;
+    align-self: flex-start;
+    margin-left: 0;
+  }
+}
