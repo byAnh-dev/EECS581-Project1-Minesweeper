@@ -1,16 +1,10 @@
-/**
- * Module: SetupControls
- * Description: Lets the player choose a mine count and request game start.
- * Inputs: onStart callback and optional disabled flag.
- * Outputs: Setup form; passes the selected count to onStart.
- */
 
 import { useId, useState } from "react";
-import type { FormEvent } from "react";
+import type { SubmitEvent } from "react";
 import { MIN_MINES, MAX_MINES } from "../types";
 
 type SetupControlsProps = {
-  onStart: (mineCount: number) => void;
+  onStart: (rawInput: string) => void;
   disabled?: boolean;
 };
 
@@ -18,13 +12,14 @@ export default function SetupControls({
   onStart,
   disabled = false,
 }: SetupControlsProps) {
-  const [mineCount, setMineCount] = useState(MIN_MINES);
-  const selectId = useId();
+  const [mineCount, setMineCount] = useState("");
+  const inputId = useId();
+  const helpId = useId();
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    // Prevent the browser from refreshing when the form is submitted.
+  function handleSubmit(event: SubmitEvent<HTMLFormElement>) {
     event.preventDefault();
 
+    // Send the text to the parent, which calls the input handler.
     if (!disabled) {
       onStart(mineCount);
     }
@@ -32,29 +27,34 @@ export default function SetupControls({
 
   return (
     <form className="setup-controls" onSubmit={handleSubmit}>
-      <h2>Set up your game</h2>
-      <p>Choose 10–20 mines for your 10 × 10 board.</p>
+      <div className="setup-controls__field">
+        <label htmlFor={inputId}>MINE COUNT</label>
 
-      <label htmlFor={selectId}>Number of mines</label>
+        <input
+          id={inputId}
+          type="number"
+          min={MIN_MINES}
+          max={MAX_MINES}
+          step={1}
+          required
+          placeholder="10–20"
+          aria-describedby={helpId}
+          value={mineCount}
+          onChange={(event) => setMineCount(event.target.value)}
+          disabled={disabled}
+        />
+      </div>
 
-      <select
-        id={selectId}
-        value={mineCount}
-        onChange={(event) => setMineCount(Number(event.target.value))}
-        disabled={disabled}
-      >
-        {Array.from(
-          { length: MAX_MINES - MIN_MINES + 1 },
-          (_, index) => MIN_MINES + index,
-        ).map((count) => (
-          <option key={count} value={count}>
-            {count}
-          </option>
-        ))}
-      </select>
+      <div className="setup-controls__description">
+        <h2>Dial in the difficulty</h2>
+
+        <p id={helpId}>
+          Board stays 10×10. Only the mine count changes between games.
+        </p>
+      </div>
 
       <button type="submit" disabled={disabled}>
-        Start Game
+        Start round
       </button>
     </form>
   );
