@@ -1,4 +1,7 @@
-
+/**
+ * SetupControls: mine-count box and Start round button.
+ * The parent (UserInterface) starts the game; this form only collects the number.
+ */
 import { useId, useState } from "react";
 import type { SubmitEvent } from "react";
 import { MIN_MINES, MAX_MINES } from "../types";
@@ -12,7 +15,8 @@ export default function SetupControls({
   onStart,
   disabled = false,
 }: SetupControlsProps) {
-  const [mineCount, setMineCount] = useState("");
+  // Default 15 so the player can start without typing first.
+  const [mineCount, setMineCount] = useState("15");
   const inputId = useId();
   const helpId = useId();
 
@@ -27,6 +31,7 @@ export default function SetupControls({
 
   return (
     <form className="setup-controls" onSubmit={handleSubmit}>
+      {/* Number of mines (10–20) */}
       <div className="setup-controls__field">
         <label htmlFor={inputId}>MINE COUNT</label>
 
@@ -45,6 +50,7 @@ export default function SetupControls({
         />
       </div>
 
+      {/* Short note that the board size never changes */}
       <div className="setup-controls__description">
         <h2>Dial in the difficulty</h2>
 
