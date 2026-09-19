@@ -44,12 +44,12 @@
 
 ### Mariska Rai
 
-<img src="assets/team-member-4.jpg" alt="Team Member 4" width="150">
+<img src="assets/Mariska.png" alt="Team Member 4" width="150">
 
 - **KU Email:** [mrai38@ku.edu](mailto:mrai38@ku.edu)
 - **GitHub:** [mariskarai](https://github.com/mariskarai)
-- **Expertise:**
-- **Availability:**
+- **Expertise:** UI/UX, BACK END
+- **Availability:** Wednesday, 1-2pm
 
 ### Rijul Poudel
 
