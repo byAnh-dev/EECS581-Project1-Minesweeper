@@ -64,10 +64,10 @@
 
 <img src="assets/team-member-4.jpg" alt="Team Member 4" width="150">
 
-- **KU Email:** [email@ku.edu](mailto:email@ku.edu)
-- **GitHub:** [github-username](https://github.com/github-username)
-- **Expertise:**
-- **Availability:**
+- **KU Email:** [m890j038@ku.edu](mailto:m890j038@ku.edu)
+- **GitHub:** [montahajornaz](https://github.com/montahajornaz)
+- **Expertise:** [Backend]
+- **Availability:** MWF 1:00pm - 2:00pm
 
 ## Team Roles
 
