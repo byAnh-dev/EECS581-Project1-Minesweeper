@@ -1,5 +1,4 @@
-import { getCell, isValidPosition } from "./boardManager.ts";
-import { makeFirstCellSafe } from "./gameLogicFeatures.ts";
+import { getCell, isValidPosition, makeFirstCellSafe } from "./boardManager.ts";
 import { loseGame } from "./mineExposure.ts";
 import { revealSafeArea } from "./safeAreaReveal.ts";
 import { withWinStatus } from "./winDetection.ts";

@@ -8,8 +8,7 @@
  * External Source: OpenAI ChatGPT assisted with code review and comments.
  */
 
-import { startGame, uncover } from "./gameLogic.ts";
-import { toggleFlag } from "./gameLogicFeatures.ts";
+import { startGame, uncover, toggleFlag } from "./gameLogic.ts";
 import { isValidPosition } from "./boardManager.ts";
 
 import {

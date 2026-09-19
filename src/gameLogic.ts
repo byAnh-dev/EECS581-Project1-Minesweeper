@@ -1,11 +1,11 @@
-import { createBoardWithMines } from "./boardManager.ts";
+import { createBoardWithMines, getCell, isValidPosition } from "./boardManager.ts";
 import { uncoverSingleCell } from "./revealCell.ts";
 import {
   MIN_MINES, MAX_MINES,
-  type ActionResult, type GameState, type Position, type RandomSource,
+  type ActionResult, type Board, type GameState, type Position, type RandomSource,
 } from "./types.ts";
 
-/** Game Logic contract; `uncover` is implemented, `toggleFlag` remains to be wired. */
+/** Public player commands, shared by the input handler and other callers. */
 export interface GameLogic {
   startGame(mineCount: number, random?: RandomSource): ActionResult;
   uncover(state: GameState, position: Position, random: RandomSource): ActionResult;
@@ -51,4 +51,81 @@ export function uncover(
   random: RandomSource = Math.random,
 ): ActionResult {
   return uncoverSingleCell(state, position, random);
+}
+
+export function toggleFlag(
+  state: GameState,
+  position: Position,
+): ActionResult {
+  if (!isValidPosition(position)) {
+    return {
+      ok: false,
+      code: "INVALID_POSITION",
+      message: "Cell coordinates must be integers from 0 through 9.",
+    };
+  }
+
+  if (state.status !== "playing") {
+    return {
+      ok: true,
+      changed: false,
+      state,
+    };
+  }
+
+  const cell = getCell(state.board, position);
+
+  if (cell.visibility === "revealed") {
+    return {
+      ok: true,
+      changed: false,
+      state,
+    };
+  }
+
+  if (cell.visibility === "flagged") {
+    const board: Board = state.board.map((row, rowIndex) =>
+      row.map((existingCell, columnIndex) =>
+        rowIndex === position.row && columnIndex === position.column
+          ? { ...existingCell, visibility: "covered" as const }
+          : existingCell,
+      ),
+    );
+
+    return {
+      ok: true,
+      changed: true,
+      state: {
+        ...state,
+        board,
+        flagsPlaced: state.flagsPlaced - 1,
+      },
+    };
+  }
+
+  if (state.flagsPlaced >= state.mineCount) {
+    return {
+      ok: true,
+      changed: false,
+      state,
+    };
+  }
+
+  const board: Board = state.board.map((row, rowIndex) =>
+    row.map((existingCell, columnIndex) =>
+      rowIndex === position.row && columnIndex === position.column
+        ? { ...existingCell, visibility: "flagged" as const }
+        : existingCell,
+    ),
+  );
+
+  return {
+    ok: true,
+    changed: true,
+    state: {
+      ...state,
+      board,
+      flagsPlaced: state.flagsPlaced + 1,
+    },
+  };
 }
