@@ -44,12 +44,12 @@
 
 ### Mariska Rai
 
-<img src="assets/team-member-4.jpg" alt="Team Member 4" width="150">
+<img src="assets/Mariska.png" alt="Team Member 4" width="150">
 
 - **KU Email:** [mrai38@ku.edu](mailto:mrai38@ku.edu)
 - **GitHub:** [mariskarai](https://github.com/mariskarai)
-- **Expertise:**
-- **Availability:**
+- **Expertise:** UI/UX, BACK END
+- **Availability:** Wednesday, 1-2pm
 
 ### Rijul Poudel
 
@@ -64,28 +64,29 @@
 
 <img src="assets/team-member-4.jpg" alt="Team Member 4" width="150">
 
-- **KU Email:** [email@ku.edu](mailto:email@ku.edu)
-- **GitHub:** [github-username](https://github.com/github-username)
-- **Expertise:**
-- **Availability:**
+- **KU Email:** [m890j038@ku.edu](mailto:m890j038@ku.edu)
+- **GitHub:** [montahajornaz](https://github.com/montahajornaz)
+- **Expertise:** Backend
+- **Availability:** MWF 1:00pm - 2:00pm
 
 ## Team Roles
 
-| Role                 | Team member | Responsibilities                                           |
-| -------------------- | ----------- | ---------------------------------------------------------- |
-| Team administrator   | Montaha         | Submit project links and deliverables to Canvas            |
-| Project coordinator  | Mariska         | Track milestones, tasks, and deadlines                     |
-| Repository manager   | Anh,  Rijul         | Maintain the repository structure and review pull requests |
-| Meeting-log owner    | Shayaan         | Record attendance, decisions, tasks, and task completion   |
-| Testing/quality lead | Kodai, Sreeja         | Coordinate testing and verify deliverables                 |
+| Role                 | Team member   | Responsibilities                                           |
+| -------------------- | ------------- | ---------------------------------------------------------- |
+| Team administrator   | Montaha       | Submit project links and deliverables to Canvas            |
+| Project coordinator  | Mariska       | Track milestones, tasks, and deadlines                     |
+| Repository manager   | Anh, Rijul    | Maintain the repository structure and review pull requests |
+| Meeting-log owner    | Shayaan       | Record attendance, decisions, tasks, and task completion   |
+| Testing/quality lead | Kodai, Sreeja | Coordinate testing and verify deliverables                 |
 
 ## Meetings
 
-- **Internal team meeting: Wed 8:00PM-9:00PM** 
+- **Internal team meeting: Wed 8:00PM-9:00PM**
 - **Weekly TA meeting:** Wed 1:00pm - 2:00pm, Eaton 3001
 - [View all meeting logs](./meeting-logs/)
 
 ## Minesweeper setup info
+
 ### How to run our repo
 
 ```sh
@@ -97,14 +98,13 @@ npm run dev
 
 Open the local URL printed by Vite, usually `http://localhost:5173`. **Ctrl+C** in that terminal to stop the server.
 
-
 ### Dependencies and source layout
 
-| Packages | Purpose |
-| --- | --- |
-| `react`, `react-dom` | UI rendering |
-| `typescript`, `@types/react`, `@types/react-dom` | Type checking and React type definitions |
-| `vite`, `@vitejs/plugin-react` | Development server, React integration, and production build |
+| Packages                                         | Purpose                                                     |
+| ------------------------------------------------ | ----------------------------------------------------------- |
+| `react`, `react-dom`                             | UI rendering                                                |
+| `typescript`, `@types/react`, `@types/react-dom` | Type checking and React type definitions                    |
+| `vite`, `@vitejs/plugin-react`                   | Development server, React integration, and production build |
 
 ```text
 src/
