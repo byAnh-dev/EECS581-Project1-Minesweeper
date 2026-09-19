@@ -6,7 +6,6 @@ import { useMemo, useState } from "react";
 import { createBoard } from "./boardManager";
 import GameBoard from "./components/GameBoard";
 import SetupControls from "./components/SetupControls";
-import TopPanel from "./components/TopPanel";
 import { processFlagInput, processSetupInput, processUncoverInput } from "./inputHandler";
 import { BOARD_SIZE, type GameState, type Position } from "./types";
 
@@ -100,8 +99,6 @@ export default function UserInterface() {
 
   return (
     <main className="page">
-      <TopPanel />
-
       <section className="shell">
         {/* Title, how to play, and which phase we are in */}
         <header className="shell-header">
