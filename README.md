@@ -66,7 +66,7 @@
 
 - **KU Email:** [m890j038@ku.edu](mailto:m890j038@ku.edu)
 - **GitHub:** [montahajornaz](https://github.com/montahajornaz)
-- **Expertise:** [Backend]
+- **Expertise:** Backend
 - **Availability:** MWF 1:00pm - 2:00pm
 
 ## Team Roles
