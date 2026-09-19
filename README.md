@@ -108,8 +108,8 @@ Open the local URL printed by Vite, usually `http://localhost:5173`. **Ctrl+C** 
 
 ```text
 src/
-  boardManager.ts     # Board operations (placeholder)
-  gameLogic.ts        # Start, uncover, and flag contracts
+  boardManager.ts     # Grid, cell operations, neighbors, mines, and counts
+  gameLogic.ts        # Start game; uncover and flag remain contracts
   inputHandler.ts     # Input validation (placeholder)
   UserInterface.tsx   # React interface
   types.ts           # Shared game types
