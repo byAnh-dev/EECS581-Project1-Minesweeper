@@ -4,71 +4,16 @@
 **Semester:** Fall 2026  
 **Instructor:** Professor Hossein Saiedian
 
-## Team Members
-
-### Anh Hoang
-
-<img src="assets/anhhoang.jpg" alt="Anh Hoang" width="150">
-
-- **KU Email:** [anh.hoang@ku.edu](mailto:anh.hoang@ku.edu)
-- **GitHub:** [byAnh-Dev](https://github.com/byAnh-dev)
-- **Expertise:** React, Flask, Node.js
-- **Availability:** MWF 12:00PM - 1:00PM
-
-### Sreeja Narahari
-
-<img src="assets/sreeja.jpeg" alt="Team Member 2" width="150">
-
-- **KU Email:** [sreeja@ku.edu](mailto:sreeja@ku.edu)
-- **GitHub:** [sreeja-na](https://github.com/sreeja-na)
-- **Expertise:** UI, Backend
-- **Availability:** Mon-Fri: 12-1
-
-### Shayaan Mohammed
-
-<img src="assets/Shayaan.JPG" alt="Team Member 3" width="150">
-
-- **KU Email:** [shayaanm@ku.edu](mailto:shayaanm@ku.edu)
-- **GitHub:** [Shayaan04](https://github.com/Shayaan04)
-- **Expertise:**
-- **Availability:**
-
-### Kodai Nakae
-
-<img src="assets/Kodai.PNG" alt="Team Member 4" width="150">
-
-- **KU Email:** [kodai.nakae@ku.edu](mailto:kodai.nakae@ku.edu)
-- **GitHub:** [kodai1126](https://github.com/kodai1126)
-- **Expertise:**
-- **Availability:**
-
-### Mariska Rai
-
-<img src="assets/Mariska.png" alt="Team Member 4" width="150">
-
-- **KU Email:** [mrai38@ku.edu](mailto:mrai38@ku.edu)
-- **GitHub:** [mariskarai](https://github.com/mariskarai)
-- **Expertise:** UI/UX, BACK END
-- **Availability:** Wednesday, 1-2pm
-
-### Rijul Poudel
-
-<img src="assets/rijul.png" alt="Team Member 4" width="150">
-
-- **KU Email:** [rijulpoudel72@ku.edu](mailto:rijulpoudel72@ku.edu)
-- **GitHub:** [rijulpoudel](https://github.com/rijulpoudel)
-- **Expertise:** Backend development
-- **Availability:**Wednesday-Friday (5:00PM - 8:00PM)
-
-### Montaha Jornaz
-
-<img src="assets/team-member-4.jpg" alt="Team Member 4" width="150">
-
-- **KU Email:** [m890j038@ku.edu](mailto:m890j038@ku.edu)
-- **GitHub:** [montahajornaz](https://github.com/montahajornaz)
-- **Expertise:** Backend
-- **Availability:** MWF 1:00pm - 2:00pm
-
+## Team
+| Member | KU email | GitHub | Expertise | Availability |
+| --- | --- | --- | --- | --- |
+| <img src="assets/anhhoang.jpg" alt="Anh Hoang" width="60"><br>Anh Hoang | [anh.hoang@ku.edu](mailto:anh.hoang@ku.edu) | [byAnh-Dev](https://github.com/byAnh-dev) | React, Flask, Node.js | MWF, 12–1 PM |
+| <img src="assets/sreeja.jpeg" alt="Anh Hoang" width="60"><br>Sreeja Narahari | [sreeja@ku.edu](mailto:sreeja@ku.edu) | [sreeja-na](https://github.com/sreeja-na) | — | — |
+| <img src="assets/Shayaan.JPG" alt="Shayaan Mohammed" width="60"><br>Shayaan Mohammed | [shayaanm@ku.edu](mailto:shayaanm@ku.edu) | [Shayaan04](https://github.com/Shayaan04) | — | — |
+| <img src="assets/Kodai.PNG" alt="Kodai Nakae" width="60"><br>Kodai Nakae | [kodai.nakae@ku.edu](mailto:kodai.nakae@ku.edu) | [kodai1126](https://github.com/kodai1126) | — | — |
+| <img src="assets/Mariska.png" alt="Mariska Rai" width="60"><br>Mariska Rai | [mrai38@ku.edu](mailto:mrai38@ku.edu) | [mariskarai](https://github.com/mariskarai) | UI/UX, backend | Wed, 1–2 PM |
+| <img src="assets/rijul.png" alt="Rijul Poudel" width="60"><br>Rijul Poudel | [rijulpoudel72@ku.edu](mailto:rijulpoudel72@ku.edu) | [rijulpoudel](https://github.com/rijulpoudel) | Backend | Wed–Fri, 5–8 PM |
+| Montaha Jornaz | [m890j038@ku.edu](mailto:m890j038@ku.edu) | [montahajornaz](https://github.com/montahajornaz) | Backend | MWF, 1–2 PM |
 ## Team Roles
 
 | Role                 | Team member   | Responsibilities                                           |
@@ -81,7 +26,7 @@
 
 ## Meetings
 
-- **Internal team meeting: Wed 8:00PM-9:00PM**
+- **Internal team meeting:** Wed 8:00PM-9:00PM
 - **Weekly TA meeting:** Wed 1:00pm - 2:00pm, Eaton 3001
 - [View all meeting logs](./meeting-logs/)
 
@@ -122,38 +67,8 @@ Flags are capped at the chosen mine count. **Mines left** shows flags remaining.
 
 [System architecture](./docs/architecture.pdf) · [Hour estimate and methods](#hour-estimate-using-use-case-points) · [Personal hour tracking](#4-actual-hours-by-team-member)
 
-## Team
-
-| Member | KU email | GitHub | Expertise | Availability |
-| --- | --- | --- | --- | --- |
-| <img src="assets/anhhoang.jpg" alt="Anh Hoang" width="60"><br>Anh Hoang | [anh.hoang@ku.edu](mailto:anh.hoang@ku.edu) | [byAnh-Dev](https://github.com/byAnh-dev) | React, Flask, Node.js | MWF, 12–1 PM |
-| Sreeja Narahari | [sreeja@ku.edu](mailto:sreeja@ku.edu) | [sreeja-na](https://github.com/sreeja-na) | — | — |
-| <img src="assets/Shayaan.JPG" alt="Shayaan Mohammed" width="60"><br>Shayaan Mohammed | [shayaanm@ku.edu](mailto:shayaanm@ku.edu) | [Shayaan04](https://github.com/Shayaan04) | — | — |
-| <img src="assets/Kodai.PNG" alt="Kodai Nakae" width="60"><br>Kodai Nakae | [kodai.nakae@ku.edu](mailto:kodai.nakae@ku.edu) | [kodai1126](https://github.com/kodai1126) | — | — |
-| <img src="assets/Mariska.png" alt="Mariska Rai" width="60"><br>Mariska Rai | [mrai38@ku.edu](mailto:mrai38@ku.edu) | [mariskarai](https://github.com/mariskarai) | UI/UX, backend | Wed, 1–2 PM |
-| <img src="assets/rijul.png" alt="Rijul Poudel" width="60"><br>Rijul Poudel | [rijulpoudel72@ku.edu](mailto:rijulpoudel72@ku.edu) | [rijulpoudel](https://github.com/rijulpoudel) | Backend | Wed–Fri, 5–8 PM |
-| Montaha Jornaz | [m890j038@ku.edu](mailto:m890j038@ku.edu) | [montahajornaz](https://github.com/montahajornaz) | Backend | MWF, 1–2 PM |
-
-## Roles
-
-| Role | Members |
-| --- | --- |
-| Team administrator | Montaha |
-| Project coordinator | Mariska |
-| Repository managers | Anh, Rijul |
-| Meeting-log owner | Shayaan |
-| Testing/quality leads | Kodai, Sreeja |
-
-## Meetings
-
-- **Team:** Wednesday, 8–9 PM.
-- **TA:** Wednesday, 1–2 PM, Eaton 3001.
-- [Meeting log](./meeting-logs/Team19_Meeting_log.pdf) · [Template](./meeting-logs/meeting-template.md)
-
 ## Hour estimate using Use Case Points
-
 **Provisional result: 31.95 Use Case Points × 1.5 hours = about 48 person-hours.**
-
 
 ### 1. Count actors and use cases
 
