@@ -9,7 +9,7 @@
 | --- | --- | --- | --- | --- |
 | <img src="assets/anhhoang.jpg" alt="Anh Hoang" width="60"><br>Anh Hoang | [anh.hoang@ku.edu](mailto:anh.hoang@ku.edu) | [byAnh-Dev](https://github.com/byAnh-dev) | React, Flask, Node.js | MWF, 12–1 PM |
 | <img src="assets/sreeja.jpeg" alt="Anh Hoang" width="60"><br>Sreeja Narahari | [sreeja@ku.edu](mailto:sreeja@ku.edu) | [sreeja-na](https://github.com/sreeja-na) | — | — |
-| <img src="assets/Shayaan.JPG" alt="Shayaan Mohammed" width="60"><br>Shayaan Mohammed | [shayaanm@ku.edu](mailto:shayaanm@ku.edu) | [Shayaan04](https://github.com/Shayaan04) | — | — |
+| <img src="assets/Shayaan.JPG" alt="Shayaan Mohammed" width="60"><br>Shayaan Mohammed | [shayaanm@ku.edu](mailto:shayaanm@ku.edu) | [Shayaan04](https://github.com/Shayaan04) | Backend | MWF 12-1PM |
 | <img src="assets/Kodai.PNG" alt="Kodai Nakae" width="60"><br>Kodai Nakae | [kodai.nakae@ku.edu](mailto:kodai.nakae@ku.edu) | [kodai1126](https://github.com/kodai1126) | — | — |
 | <img src="assets/Mariska.png" alt="Mariska Rai" width="60"><br>Mariska Rai | [mrai38@ku.edu](mailto:mrai38@ku.edu) | [mariskarai](https://github.com/mariskarai) | UI/UX, backend | Wed, 1–2 PM |
 | <img src="assets/rijul.png" alt="Rijul Poudel" width="60"><br>Rijul Poudel | [rijulpoudel72@ku.edu](mailto:rijulpoudel72@ku.edu) | [rijulpoudel](https://github.com/rijulpoudel) | Backend | Wed–Fri, 5–8 PM |
@@ -146,7 +146,7 @@ Since all the user case point are fairly easy to achieve, we are counting 1 user
 | --- | --- | ---: | 
 | Anh Hoang | Project setup, shared types, board initialization, documentation, module consolidation | 10 | 
 | Sreeja Narahari | Setup controls/styling, level/loading panels, meeting-log upload | 8 | 
-| Shayaan Mohammed | Input parsing, validation, reveal/flag dispatch, profile updates | 7 |
+| Shayaan Mohammed | Input parsing, validation, reveal/flag dispatch, profile updates | 8 |
 | Kodai Nakae | Testing; README roles, meeting details, profile updates | 7 | 
 | Mariska Rai | Game board/UI integration, styling, loading-screen fix, profile updates | 10 | 
 | Rijul Poudel | Reveal guards, relocation, safe-area expansion, win/loss integration, documentation | 9 | 
