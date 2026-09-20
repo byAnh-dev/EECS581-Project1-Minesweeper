@@ -21,8 +21,8 @@
 
 - **KU Email:** [sreeja@ku.edu](mailto:sreeja@ku.edu)
 - **GitHub:** [sreeja-na](https://github.com/sreeja-na)
-- **Expertise:**UI, Backend
-- **Availability:**Mon-Fri: 12-1
+- **Expertise:** UI, Backend
+- **Availability:** Mon-Fri: 12-1
 
 ### Shayaan Mohammed
 
