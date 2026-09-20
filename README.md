@@ -68,7 +68,7 @@ Flags are capped at the chosen mine count. **Mines left** shows flags remaining.
 [System architecture](./docs/architecture.pdf) · [Hour estimate and methods](#hour-estimate-using-use-case-points) · [Personal hour tracking](#4-actual-hours-by-team-member)
 
 ## Hour estimate using Use Case Points
-**Provisional result: 31.95 Use Case Points × 2 hours = about 62 person-hours.**
+**Provisional result: 31.95 Use Case Points × 2 hours = about 64 person-hours.**
 
 ### 1. Count actors and use cases
 
