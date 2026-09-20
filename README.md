@@ -146,7 +146,7 @@ Since all the user case point are fairly easy to achieve, we are counting 1 user
 | --- | --- | ---: | 
 | Anh Hoang | Project setup, shared types, board initialization, documentation, module consolidation | 10 | 
 | Sreeja Narahari | Setup controls/styling, level/loading panels, meeting-log upload | 8 | 
-| Shayaan Mohammed | Input parsing, validation, reveal/flag dispatch, profile updates | 8 |
+| Shayaan Mohammed | Input parsing, validation, reveal/flag dispatch, profile updates | 7 |
 | Kodai Nakae | Testing; README roles, meeting details, profile updates | 7 | 
 | Mariska Rai | Game board/UI integration, styling, loading-screen fix, profile updates | 10 | 
 | Rijul Poudel | Reveal guards, relocation, safe-area expansion, win/loss integration, documentation | 9 | 
