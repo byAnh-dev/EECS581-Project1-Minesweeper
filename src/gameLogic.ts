@@ -1,7 +1,5 @@
-import { createBoardWithMines, getCell, isValidPosition, makeFirstCellSafe } from "./boardManager.ts";
-import { loseGame } from "./mineExposure.ts";
+import { createBoardWithMines, exposeAllMines, getCell, isValidPosition, makeFirstCellSafe } from "./boardManager.ts";
 import { revealSafeArea } from "./safeAreaReveal.ts";
-import { withWinStatus } from "./winDetection.ts";
 import {
   MIN_MINES, MAX_MINES,
   type ActionResult, type Board, type GameState, type Position, type RandomSource,
@@ -185,4 +183,38 @@ export function toggleFlag(
       flagsPlaced: state.flagsPlaced + 1,
     },
   };
+}
+
+/**
+ * End-of-game transition for a loss
+ */
+function loseGame(state: GameState): GameState {
+  return {
+    ...state,
+    board: exposeAllMines(state.board),
+    status: "lost",
+  };
+}
+
+/**
+ * How many cells the player has to uncover to win: the whole board minus the mines.
+ */
+function countSafeCells(board: Board, mineCount: number): number {
+  const cellCount = board.reduce((total, row) => total + row.length, 0);
+  return cellCount - mineCount;
+}
+
+/**
+ * True once every safe cell is uncovered.
+ */
+function hasWon(state: GameState): boolean {
+  return (
+    state.status === "playing" &&
+    state.revealedSafeCount >= countSafeCells(state.board, state.mineCount)
+  );
+}
+
+/** Applies the win transition, returning the very same state object when not yet won. */
+function withWinStatus(state: GameState): GameState {
+  return hasWon(state) ? { ...state, status: "won" } : state;
 }

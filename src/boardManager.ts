@@ -182,3 +182,16 @@ export function makeFirstCellSafe(
 
   return calculateAdjacentMines(updatedBoard);
 }
+
+/**
+ * Reveal all cell
+ */
+export function exposeAllMines(board: Board): Board {
+  return board.map((row) =>
+    row.map((cell) =>
+      cell.hasMine && cell.visibility !== "revealed"
+        ? { ...cell, visibility: "revealed" as const }
+        : cell,
+    ),
+  );
+}
