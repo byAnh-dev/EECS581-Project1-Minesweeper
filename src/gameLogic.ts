@@ -1,5 +1,7 @@
-import { createBoardWithMines, exposeAllMines, getCell, isValidPosition, makeFirstCellSafe } from "./boardManager.ts";
-import { revealSafeArea } from "./safeAreaReveal.ts";
+import {
+  createBoardWithMines, exposeAllMines, getCell, getNeighbors,
+  isValidPosition, makeFirstCellSafe, updateCell,
+} from "./boardManager.ts";
 import {
   MIN_MINES, MAX_MINES,
   type ActionResult, type Board, type GameState, type Position, type RandomSource,
@@ -53,19 +55,7 @@ function unchanged(state: GameState): ActionResult {
   return { ok: true, changed: false, state };
 }
 
-/**
- * Player command: open a cell, and whatever it cascades into.
- *
- * Order of the guards matters. We reject bad coordinates first (cheap, unambiguous),
- * then refuse to touch a finished game, then honour the player's own flags. Only after
- * all three do we spend randomness on first-click safety.
- *
- * The amount of board that opens is not decided here: once the click is proven legal and
- * mine-free, `rtevealSafeArea` takes over so that opening an empty cell cascades and
- * opening a numbered cell opens only itself. A legal click then has exactly three
- * possible outcomes: `loseGame` (the cell was a mine), `withWinSatus` (it was the last
- * safe cell), or an ordinary reveal that leaves the game running.
- */
+/** Open a cell action*/
 export function uncover(
   state: GameState,
   position: Position,
@@ -217,4 +207,44 @@ function hasWon(state: GameState): boolean {
 /** Applies the win transition, returning the very same state object when not yet won. */
 function withWinStatus(state: GameState): GameState {
   return hasWon(state) ? { ...state, status: "won" } : state;
+}
+
+/** Outcome of a cascade: the updated board plus how many cells were newly opened. */
+interface SafeAreaReveal {
+  readonly board: Board;
+  readonly revealedCount: number;
+}
+
+/** Open the whole safe region that the player's click belongs to using BFS walk */
+function revealSafeArea(board: Board, origin: Position): SafeAreaReveal {
+  if (!isValidPosition(origin)) {
+    throw new RangeError("Cell coordinates must be integers from 0 through 9.");
+  }
+
+  const frontier: Position[] = [origin];
+  // Track what cell has been visited to prevent duplicate visit attempts
+  const visited = new Set<string>();
+  let nextBoard = board;
+  let revealedCount = 0;
+
+  while (frontier.length > 0) {
+    const current = frontier.shift()!;
+    const key = `${current.row}:${current.column}`;
+    if (visited.has(key)) continue;
+    visited.add(key);
+
+    const cell = getCell(nextBoard, current);
+
+    // Skip flagged and already revealed cells
+    if (cell.visibility !== "covered") continue;
+
+    nextBoard = updateCell(nextBoard, current, { visibility: "revealed" });
+    revealedCount++;
+
+    if (cell.adjacentMines === 0) {
+      frontier.push(...getNeighbors(current));
+    }
+  }
+
+  return { board: nextBoard, revealedCount };
 }
