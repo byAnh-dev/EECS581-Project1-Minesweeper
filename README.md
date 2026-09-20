@@ -17,12 +17,12 @@
 
 ### Sreeja Narahari
 
-<img src="assets/team-member-2.jpg" alt="Team Member 2" width="150">
+<img src="assets/sreeja.jpeg" alt="Team Member 2" width="150">
 
 - **KU Email:** [sreeja@ku.edu](mailto:sreeja@ku.edu)
 - **GitHub:** [sreeja-na](https://github.com/sreeja-na)
-- **Expertise:**
-- **Availability:**
+- **Expertise:**UI, Backend
+- **Availability:**Mon-Fri: 12-1
 
 ### Shayaan Mohammed
 
