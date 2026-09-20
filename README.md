@@ -8,7 +8,7 @@
 | Member | KU email | GitHub | Expertise | Availability |
 | --- | --- | --- | --- | --- |
 | <img src="assets/anhhoang.jpg" alt="Anh Hoang" width="60"><br>Anh Hoang | [anh.hoang@ku.edu](mailto:anh.hoang@ku.edu) | [byAnh-Dev](https://github.com/byAnh-dev) | React, Flask, Node.js | MWF, 12–1 PM |
-| <img src="assets/sreeja.jpeg" alt="Anh Hoang" width="60"><br>Sreeja Narahari | [sreeja@ku.edu](mailto:sreeja@ku.edu) | [sreeja-na](https://github.com/sreeja-na) | — | — |
+| <img src="assets/sreeja.jpeg" alt="Anh Hoang" width="60"><br>Sreeja Narahari | [sreeja@ku.edu](mailto:sreeja@ku.edu) | [sreeja-na](https://github.com/sreeja-na) | UI, Backend | TuThu, 10-11 AM |
 | <img src="assets/Shayaan.JPG" alt="Shayaan Mohammed" width="60"><br>Shayaan Mohammed | [shayaanm@ku.edu](mailto:shayaanm@ku.edu) | [Shayaan04](https://github.com/Shayaan04) | Backend | MWF 12-1PM |
 | <img src="assets/Kodai.PNG" alt="Kodai Nakae" width="60"><br>Kodai Nakae | [kodai.nakae@ku.edu](mailto:kodai.nakae@ku.edu) | [kodai1126](https://github.com/kodai1126) | DSA | MWF 12-1PM |
 | <img src="assets/Mariska.png" alt="Mariska Rai" width="60"><br>Mariska Rai | [mrai38@ku.edu](mailto:mrai38@ku.edu) | [mariskarai](https://github.com/mariskarai) | UI/UX, backend | Wed, 1–2 PM |
