@@ -68,7 +68,7 @@ Flags are capped at the chosen mine count. **Mines left** shows flags remaining.
 [System architecture](./docs/architecture.pdf) · [Hour estimate and methods](#hour-estimate-using-use-case-points) · [Personal hour tracking](#4-actual-hours-by-team-member)
 
 ## Hour estimate using Use Case Points
-**Provisional result: 31.95 Use Case Points × 1.5 hours = about 48 person-hours.**
+**Provisional result: 31.95 Use Case Points × 2 hours = about 62 person-hours.**
 
 ### 1. Count actors and use cases
 
@@ -142,7 +142,7 @@ Since all the user case point are fairly easy to achieve, we are counting 1 user
 **31.94945 × 2 ≈ 64 person-hours.**
 
 ### 4. Actual hours by team member
-| Team member | Work used for estimate | Estimated hours |
+| Team member | Work used for tracking| Actual hours |
 | --- | --- | ---: | 
 | Anh Hoang | Project setup, shared types, board initialization, documentation, module consolidation | 10 | 
 | Sreeja Narahari | Setup controls/styling, level/loading panels, meeting-log upload | 8 | 
@@ -151,4 +151,4 @@ Since all the user case point are fairly easy to achieve, we are counting 1 user
 | Mariska Rai | Game board/UI integration, styling, loading-screen fix, profile updates | 10 | 
 | Rijul Poudel | Reveal guards, relocation, safe-area expansion, win/loss integration, documentation | 9 | 
 | Montaha Jornaz | Adjacent-mine counts, first-click safety, flag rules/counter, README updates | 7 |
-| **Team total** | | **66** | |
+| **Team total** | | **58** | |
