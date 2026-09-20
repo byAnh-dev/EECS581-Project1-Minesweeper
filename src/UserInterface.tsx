@@ -1,6 +1,9 @@
 /**
- * UserInterface: the visible game screen.
- * sends clicks to the input handler (start, uncover, flag).
+ * Module: UserInterface: owns React game state and renders the game screen
+ * Inputs: Player events and ActionResult values from inputHandler
+ * Outputs: Rendered screen; start, uncover, and flag requests
+ * Authors: Anh Hoang (setup); Sreeja Narahari (setup/phases); Mariska Rai (arcade UI, command wiring, loading fix)
+ * Created: 2026-09-10 
  */
 import { useMemo, useState } from "react";
 import { createBoard } from "./boardManager";

@@ -1,3 +1,10 @@
+/*
+ * Module: styles: responsive arcade layout, controls, and cell states
+ * Inputs: Component classes, viewport, public/Bg.png, Google Fonts
+ * Output: Browser presentation
+ * Authors: Anh Hoang (setup); Sreeja Narahari (setup styles); Mariska Rai (arcade theme)
+ * Created: 2026-09-10
+ */
 /* Page: waterfall background and the centered arcade layout. */
 * {
   box-sizing: border-box;

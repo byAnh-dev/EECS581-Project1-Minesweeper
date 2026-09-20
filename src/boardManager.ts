@@ -1,4 +1,11 @@
-
+/**
+ * Module: boardManager: immutable grid access, mine placement, and neighbor counts
+ * Inputs: Board, Position, cell changes, mine count, optional RandomSource
+ * Outputs: Board, Cell, Position[], or boolean; invalid arguments throw RangeError
+ * Authors: Anh Hoang (board operations, consolidation); Montaha Jornaz (counts/first-click safety); Rijul Poudel (random relocation/mine exposure)
+ * Created: 2026-09-10 
+ * External Source: OpenAI ChatGPT assisted with code testing and comments
+ */
 import {
   BOARD_SIZE, MIN_MINES, MAX_MINES,
   type AdjacentMines, type Board, type Cell, type Position, type RandomSource,
@@ -69,7 +76,7 @@ export function createBoardWithMines(
   //2. Choose position to put mines
   const available = Array.from({ length: BOARD_SIZE * BOARD_SIZE }, (_, index) => index);
   const mines = new Set<number>();
-  for (let placed = 0; placed < mineCount; placed++) { //Get random number from [0,1) and multiply with 100 (max cell range) to get a random cell
+  for (let placed = 0; placed < mineCount; placed++) { // Sample from remaining positions to avoid duplicate mines.
     const sample = random();
     if (!Number.isFinite(sample) || sample < 0 || sample >= 1) {
       throw new RangeError("The random source must return a number in [0, 1).");
@@ -184,7 +191,7 @@ export function makeFirstCellSafe(
 }
 
 /**
- * Reveal all cell
+ * Reveal every mine, including flagged mines; leave safe cells unchanged.
  */
 export function exposeAllMines(board: Board): Board {
   return board.map((row) =>

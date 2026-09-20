@@ -1,3 +1,10 @@
+/**
+ * Module: main: mount the React application in StrictMode
+ * Input: HTML element #root
+ * Output: Rendered UserInterface; throws if root is missing
+ * Author: Anh Hoang
+ * Created: 2026-09-10
+ */
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import UserInterface from "./UserInterface";

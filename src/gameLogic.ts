@@ -1,3 +1,10 @@
+/**
+ * Module: gameLogic: start, uncover, flag, flood fill, and win/loss rules
+ * Inputs: Mine count, GameState, Position, optional RandomSource
+ * Outputs: ActionResult with updated/unchanged state or a validation error
+ * Authors: Anh Hoang (setup/consolidation); Montaha Jornaz (flags); Rijul Poudel (uncover, flood fill, win/loss)
+ * Created: 2026-09-10 
+ */
 import {
   createBoardWithMines, exposeAllMines, getCell, getNeighbors,
   isValidPosition, makeFirstCellSafe, updateCell,
@@ -50,7 +57,7 @@ function invalidPosition(): ActionResult {
   };
 }
 
-/**State return for a safe action like click on a revealed cell */
+/** Return a successful no-op with the original state, such as a repeated reveal. */
 function unchanged(state: GameState): ActionResult {
   return { ok: true, changed: false, state };
 }
@@ -74,7 +81,7 @@ export function uncover(
     ? state.board
     : makeFirstCellSafe(state.board, position, random);
 
-  // 3. If not first click, check if the click pass through or not
+  // 3. Check for a mine after first-reveal protection.
   if (getCell(board, position).hasMine) { //If user click on a mine
     return {
       ok: true,
@@ -98,6 +105,7 @@ export function uncover(
   };
 }
 
+/** Toggle covered/flagged cells; ignore revealed cells, finished games, or excess flags. */
 export function toggleFlag(
   state: GameState,
   position: Position,
@@ -128,6 +136,7 @@ export function toggleFlag(
     };
   }
 
+  // Unflagging remains available even when all allowed flags are placed.
   if (cell.visibility === "flagged") {
     const board: Board = state.board.map((row, rowIndex) =>
       row.map((existingCell, columnIndex) =>
@@ -241,6 +250,7 @@ function revealSafeArea(board: Board, origin: Position): SafeAreaReveal {
     nextBoard = updateCell(nextBoard, current, { visibility: "revealed" });
     revealedCount++;
 
+    // Current neighbor counts guarantee that neighbors of a zero cell are safe.
     if (cell.adjacentMines === 0) {
       frontier.push(...getNeighbors(current));
     }

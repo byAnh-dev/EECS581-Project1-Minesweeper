@@ -1,4 +1,10 @@
-/** Shared game contracts from project description  */
+/**
+ * Module: types: shared game constants and read-only data contracts
+ * Inputs: None
+ * Outputs: Board limits, Cell/Board/GameState/Position/ActionResult/RandomSource types
+ * Author: Anh Hoang
+ * Created: 2026-09-10 
+ */
 export const BOARD_SIZE = 10;
 export const MIN_MINES = 10;
 export const MAX_MINES = 20;
@@ -39,4 +45,3 @@ export type ActionResult =
       readonly code: "INVALID_MINE_COUNT" | "INVALID_POSITION";
       readonly message: string;
     };
-

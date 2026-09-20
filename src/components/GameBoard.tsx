@@ -1,6 +1,9 @@
 /**
- * GameBoard: draws the 10x10 grid with A–J / 1–10 labels.
- * Clicks go back to UserInterface. This file does not place mines.
+ * Module: GameBoard UI including labeled grid, cell appearance, and pointer/keyboard controls
+ * Inputs: Board, disabled/detonated flags, onUncover and onFlag callbacks
+ * Outputs: React grid and callback calls with selected positions
+ * Author: Mariska Rai
+ * Created: 2026-09-18
  */
 import type { KeyboardEvent, MouseEvent } from "react";
 import { BOARD_SIZE, type Board, type Cell, type Position } from "../types";

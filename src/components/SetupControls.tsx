@@ -1,6 +1,9 @@
 /**
- * SetupControls: mine-count box and Start round button.
- * The parent (UserInterface) starts the game; this form only collects the number.
+ * Module: SetupControls: mine-count form and Start round button
+ * Inputs: onStart callback, optional disabled flag, player-entered count
+ * Outputs: React form and raw mine-count text passed to onStart
+ * Authors: Sreeja Narahari (setup form); Mariska Rai (arcade UI integration)
+ * Created: 2026-09-16 
  */
 import { useId, useState } from "react";
 import type { SubmitEvent } from "react";
