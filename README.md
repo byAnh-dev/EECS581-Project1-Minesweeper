@@ -13,7 +13,7 @@
 | <img src="assets/Kodai.PNG" alt="Kodai Nakae" width="60"><br>Kodai Nakae | [kodai.nakae@ku.edu](mailto:kodai.nakae@ku.edu) | [kodai1126](https://github.com/kodai1126) | DSA | MWF 12-1PM |
 | <img src="assets/Mariska.png" alt="Mariska Rai" width="60"><br>Mariska Rai | [mrai38@ku.edu](mailto:mrai38@ku.edu) | [mariskarai](https://github.com/mariskarai) | UI/UX, backend | Wed, 1–2 PM |
 | <img src="assets/rijul.png" alt="Rijul Poudel" width="60"><br>Rijul Poudel | [rijulpoudel72@ku.edu](mailto:rijulpoudel72@ku.edu) | [rijulpoudel](https://github.com/rijulpoudel) | Backend | Wed–Fri, 5–8 PM |
-| <img src="assets/Montaha.jpg" alt="Montaha Jornaz" width="60"><br>Montaha Jornaz | [m890j038@ku.edu](mailto:m890j038@ku.edu) | [montahajornaz](https://github.com/montahajornaz) | Backend | MWF, 1–2 PM |
+| <img src="assets/Montaha.jpeg" alt="Montaha Jornaz" width="60"><br>Montaha Jornaz | [m890j038@ku.edu](mailto:m890j038@ku.edu) | [montahajornaz](https://github.com/montahajornaz) | Backend | MWF, 1–2 PM |
 ## Team Roles
 
 | Role                 | Team member   | Responsibilities                                           |
